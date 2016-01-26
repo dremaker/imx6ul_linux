@@ -1,0 +1,23 @@
+#
+# SIM configuration
+#
+
+menu "MXC SIM Support"
+
+config MXC_SIM
+	tristate "MXC SIM support"
+	default n
+	---help---
+	Say Y to get MXC SIM support.
+
+
+config MXC_SIM_DEBUG
+	bool "MXC SIM DEBUG support"
+	depends on MXC_SIM != n
+	---help---
+	This is an option for use by developers; most people should say N here.  This enables SIM engine core and driver debugging.
+	
+endmenu
+
+
+

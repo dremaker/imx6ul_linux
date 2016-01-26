@@ -1,0 +1,19 @@
+#
+# SIM configuration
+#
+
+menu "MXC Magc Support"
+
+config MXC_MAGC
+	tristate "MXC magc support"
+	default n
+	---help---
+	Say Y to get MXC magc support.
+
+config MXC_MAGC_DEBUG
+	bool "MXC magc debug support"
+	depends on MXC_MAGC != n
+	---help---
+	Say Y to get MXC magc debug support.
+
+endmenu
